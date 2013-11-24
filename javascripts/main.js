@@ -1,5 +1,4 @@
-var exports = [];
-var markdown = exports;
+switchPage('home');
 
 var sectionHeight = function() {
   var total    = $(window).height(),
@@ -16,7 +15,11 @@ var sectionHeight = function() {
 $(window).resize(sectionHeight);
 
 $(document).ready(function(){
-  $('#home').remove();
+  $('#home').hide();
+  onDocReady();
+});
+
+function onDocReady(){
   $("section h1, section h2").each(function(){
     $("nav ul").append("<li class='tag-" + this.nodeName.toLowerCase() + "'><a href='#" + $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,'') + "'>" + $(this).text() + "</a></li>");
     $(this).attr("id",$(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,''));
@@ -34,7 +37,7 @@ $(document).ready(function(){
   sectionHeight();
   
   $('img').load(sectionHeight);
-});
+}
 
 fixScale = function(doc) {
 
