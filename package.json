@@ -1,27 +1,22 @@
 {
   "name": "xavieryao.github.io",
-  "description": "JavaScript running on Node.js to build xavieryao.github.io\n
-  				  The scripts automatically generates content table and other resources.",
+    "description": "JavaScript running on Node.js to build xavieryao.github.io The scripts automatically generates content table and other resources.",
   "keywords": ["web-builder","static website"],
   "maintainers": [ {
-  	  "name": "Xavier Yao",
-  	  "email": "xavieryao@live.cn"
-  	}],
-  "licenses": [ {
+      "name": "Xavier Yao",
+      "email": "xavieryao@live.cn"
+    }],
+  "licenses": [{
       "type": "GPLv3",
       "url": "/LICENSES"
-  	}],
+    }],
   "repositories": [{
-  	"type": "git",
-  	"url": "http://github.com/xavieryao/xavieryao.github.io"
-  	}],
+    "type": "git",
+    "url": "http://github.com/xavieryao/xavieryao.github.io"
+    }],
   "version": "0.0.1",
   "private": true,
-/*  "scripts": {
-    "start": "node app.js"
-  },
- */
   "dependencies": {
-    
+    "markdown-js": "*"
   }
 }

@@ -746,10 +746,12 @@ header p {
   background: linear-gradient(#ffe788, #ffe788);
   background-color: #ffeca0;
 }
-#banner .fork {
+#banner .btn_row{
   position: fixed;
   left: 50%;
   margin-left: -325px;
+}
+#banner .fork {
   padding: 10px 12px;
   margin-top: 6px;
   line-height: 14px;
