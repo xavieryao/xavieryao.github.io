@@ -1,4 +1,6 @@
 function switchPage(page){
+	var loadIcon = '<img src="images/octocat-spinner-128.gif" alt="Loading"></img><p>Loading...<br /></p>'
+	$('#content').html(loadIcon);
 	if(page === 'home'){
 		$('#home').fadeOut('slow');
 	}else{
@@ -12,7 +14,6 @@ function switchPage(page){
 			loadContentTable();
 			break;
 		default:
-			console.log('reload'+page);
 			reload(page);
 	}
 }
