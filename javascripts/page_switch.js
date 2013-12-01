@@ -1,5 +1,5 @@
 function switchPage(page){
-	var loadIcon = '<img src="images/octocat-spinner-128.gif" alt="Loading"></img><p>Loading...<br /></p>'
+	var loadIcon = '<div class="loadIcon" ><img src="images/octocat-spinner-64.gif" alt="Loading"></img><p>Loading...<br /></p></div>';
 	$('#content').html(loadIcon);
 	if(page === 'home'){
 		$('#home').fadeOut('slow');
@@ -8,13 +8,13 @@ function switchPage(page){
 	}
 	switch(page){
 		case 'home':
-			reload('home.html')
+			reload('html','home.html')
 			break;
 		case 'content_table':
 			loadContentTable();
 			break;
 		default:
-			reload(page);
+			reload('md',page);
 	}
 }
 
@@ -26,6 +26,6 @@ function loadContentTable(){
 		for(var i = 0; i < ct.length; i++){
 			md = md.concat("<a href=\"javascript:switchPage('"+ct[i].URL+"')\" >"+ct[i].title+'</a>   \n');
 		}
-		reloadFromMd(md);
+		reload('md_text',md);
 	});
 }

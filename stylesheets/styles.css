@@ -570,6 +570,11 @@ strong {
   position: relative;
 }
 
+div .loadIcon {
+  position: relative;
+  left: 45%
+}
+
 section img {
   max-width: 100%;
 }
@@ -909,8 +914,7 @@ footer {
     bottom: auto;
     width: auto;
   }
-}
-@media print, screen and (max-width: 720px) {
+}@media print, screen and (max-width: 720px) {
   body {
     word-wrap: break-word;
   }
