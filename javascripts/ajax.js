@@ -9,10 +9,10 @@ function reload(method,content){
 		case 'md':
 			reloadFromMdFile(content);
 			break;
-		case 'md_text':
+		case 'md_plain':
 			reloadFromMdText(content);
 			break;
-		case 'html_text':
+		case 'html_plain':
 			reloadFromHtmlText(content);
 			break;
 		case 'html':

@@ -8,7 +8,7 @@ function switchPage(page){
 	}
 	switch(page){
 		case 'home':
-			reload('html','home.html')
+			reload('md','welcome.md')
 			break;
 		case 'content_table':
 			loadContentTable();
@@ -26,6 +26,6 @@ function loadContentTable(){
 		for(var i = 0; i < ct.length; i++){
 			md = md.concat("<a href=\"javascript:switchPage('"+ct[i].URL+"')\" >"+ct[i].title+'</a>   \n');
 		}
-		reload('md_text',md);
+		reload('md_plain',md);
 	});
 }
