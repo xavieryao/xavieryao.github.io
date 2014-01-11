@@ -41,11 +41,11 @@ P.S. 代码请自行F12，有bug，轻吐槽。
 <p>You can try to start with this Hello World code: <pre class="de1"><span class="sy0">++++++++++</span><span class="sy1">[</span><span class="sy2">&gt;</span><span class="sy0">+++++++</span><span class="sy2">&gt;</span><span class="sy0">++++++++++</span><span class="sy2">&gt;</span><span class="sy0">+++</span><span class="sy2">&gt;</span><span class="sy0">+</span><span class="sy2">&lt;&lt;&lt;&lt;</span><span class="sy0">-</span><span class="sy1">]</span><span class="sy2">&gt;</span><span class="sy0">++</span><span class="sy3">.</span><span class="sy2">&gt;</span><span class="sy0">+</span><span class="sy3">.</span><span class="sy0">+++++++</span><span class="sy3">..</span><span class="sy0">+++</span><span class="sy3">.</span><span class="sy2">&gt;</span><span class="sy0">++</span><span class="sy3">.</span><span class="sy2">&lt;&lt;</span><span class="sy0">+++++++++++++++</span><span class="sy3">.</span><span class="sy2">&gt;</span><span class="sy3">.</span><span class="sy0">+++</span><span class="sy3">.</span><span class="sy0">------</span><span class="sy3">.</span><span class="sy0">--------</span><span class="sy3">.</span><span class="sy2">&gt;</span><span class="sy0">+</span><span class="sy3">.</span><span class="sy2">&gt;</span><span class="sy3">.</span> </pre></p>
 <label for="code">Input your code here:</label>
 <br />
-<textarea id="code" style="margin: 2px; width: 386px; height: 256px; "> </textarea>
+<textarea id="code" style="margin: 2px; width: 100%; height: 256px; "> </textarea>
 <br />
 <button onclick="javascript:start()">Run</button>
 <br />
-<textarea id="console" readonly="readonly" style="margin: 2px; width: 386px; height: 128px; "> </textarea>
+<textarea id="console" readonly="readonly" style="margin: 2px; width: 100%; height: 128px; "> </textarea>
 <div id="input_area">
 <h4 id="invalid">Invalid Input</h4>
 <label for="input">The program requires an input:</label>
