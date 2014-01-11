@@ -5,14 +5,14 @@
 	},
 	{
 		"title":"Great Fragments From the Great Gatsby",
-		"URL": "the_great_gatsby.markdown"
+		"URL": "the_great_gatsby.md"
 	},
 	{
 		"title": "Hello World",
-		"URL": "hello_world.markdown"
+		"URL": "hello_world.md"
 	},
 	{
 		"title": "License",
-		"URL": "../LICENSE"
+		"URL": "LICENSE.md"
 	}
 ]

@@ -1,4 +1,3 @@
-switchPage('home');
 
 var sectionHeight = function() {
   var total    = $(window).height(),
@@ -16,6 +15,7 @@ $(window).resize(sectionHeight);
 
 $(document).ready(function(){
   $('#home').hide();
+  switchPage(location.hash);
 });
 
 function createSectionIndex(){
