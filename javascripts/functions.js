@@ -16,7 +16,6 @@ var reload = function (filename){
 
 var fillContent = function (md,title){
 	$('#content').html(markdown.makeHtml(md));
-	createSectionIndex();
 	location.hash = '#' + title;
 }
 
