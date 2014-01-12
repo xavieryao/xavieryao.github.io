@@ -921,20 +921,20 @@ footer {
   }
 
   #banner .button {
-    display: none
+    /*display: none*/
   }
 
   #banner .fixed {
     float: left;
     display: inline-block;
     margin-left: 0px;
-    position: fixed;
+    /*position: fixed;*/
     left: 20px;
   }
 
   #banner .float {
-    position: fixed;
-    left: 160px;
+    /*position: fixed;*/
+    /*left: 160px;*/margin-left:5px;
     }
 
   section {
@@ -942,7 +942,7 @@ footer {
     margin-bottom: 0px;
     width: auto;
   }
-
+.btn_row {left:0;margin-left:0;}
   header ul, header p.view {
     position: static;
   }
