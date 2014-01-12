@@ -921,14 +921,14 @@ footer {
   }
 
   #banner .button {
-    display: none
+    /*display: none*/
   }
 
   #banner .fixed {
     float: left;
     display: inline-block;
     margin-left: 0px;
-    position: fixed;
+    /*position: fixed;*/
     left: 20px;
   }
 
@@ -945,6 +945,10 @@ footer {
 
   header ul, header p.view {
     position: static;
+  }
+  .btn_row {
+    left:0;
+    margin-left:0;
   }
 }
 @media print, screen and (max-width: 480px) {
