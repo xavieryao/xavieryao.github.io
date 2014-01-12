@@ -565,7 +565,8 @@ strong {
 }
 
 .wrapper {
-  width: 650px;
+  /*width: 650px;*/
+  padding: 0 10%;
   margin: 0 auto;
   position: relative;
 }
@@ -754,8 +755,9 @@ header p {
 }
 #banner .btn_row{
   position: fixed;
-  left: 50%;
-  margin-left: -325px;
+  /*left: 50%;*/
+  left: 10%;
+  /*margin-left: -325px;*/
 }
 
 #banner ul {
@@ -782,7 +784,8 @@ header p {
 }
 
 section {
-  width: 590px;
+  /*width: 590px;*/
+  width:100%;
   padding: 30px 30px 50px 30px;
   margin: 20px 0;
   margin-top: 190px;
