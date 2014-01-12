@@ -4,19 +4,28 @@
 
 var markdown = new Markdown.Converter();
 
-var reload = function (filename){
-	splited = filename.split('.');
-	if(splited.length == 1)
-		filename = filename.concat('.md');
-	console.log(filename);
-	$.get('articles/' + filename,function(result){
-		fillContent(result,splited[0])
-	});
+function reload(id){
+	if (document.articles[id].content == undefined){
+		$.get('articles/' + document.articles[id].URL,function(result){
+			document.articles[id].content = markdown.makeHtml(result);
+			fillContent();
+		});
+	}else{
+		fillContent();
+	}
+	function fillContent(){
+		$('#content').html(document.articles[id].content);
+		location.hash = '#' + formatId(id);
+	}
 }
 
-var fillContent = function (md,title){
-	$('#content').html(markdown.makeHtml(md));
-	location.hash = '#' + title;
+function formatId(id){
+	var result = id;
+	for (var i = 0; i < 6; i++) {
+		if(result < Math.pow(10,i))
+			result = '0' + result;
+	};
+	return result;
 }
 
 function switchPage(page){
@@ -32,7 +41,16 @@ function switchPage(page){
 	}
 	switch(page){
 		case 'home':
-			reload('home.md')
+			if (document.home == undefined){
+				$.get('articles/home.md' ,function(result){
+					document.home = markdown.makeHtml(result);
+					$('#content').html(document.home);
+					location.hash = '#home';	
+				});			
+			}else{
+				$('#content').html(document.home);
+				location.hash = '#home';	
+			}
 			break;
 		case 'index':
 			loadContentTable();
@@ -43,13 +61,14 @@ function switchPage(page){
 }
 
 function loadContentTable(){
-	var ct;
-	$.get('gen/content_table.json',function(result){
-		ct = eval(result);
+	if (document.content_table == undefined) {
+		var ct = document.articles;
 		var md = "###Table Of Content   \n         \n";
 		for(var i = 0; i < ct.length; i++){
-			md = md.concat("<a href=\"javascript:switchPage('"+ct[i].URL+"')\" >"+ct[i].title+'</a>   \n');
+			md = md.concat("<a href=\"javascript:switchPage('"+ i +"')\" >"+ct[i].title+'</a>   \n');
 		}
-		fillContent(md,'index');
-	});
+		document.content_table = markdown.makeHtml(md);
+	}
+	$('#content').html(document.content_table);
+	location.hash = '#index';
 }

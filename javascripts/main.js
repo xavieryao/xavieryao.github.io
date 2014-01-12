@@ -1,4 +1,6 @@
-
+/*
+ *  载入网页时自动执行的代码
+ */
 var sectionHeight = function() {
   var total    = $(window).height(),
       $section = $('section').css('height','auto');
@@ -15,7 +17,10 @@ $(window).resize(sectionHeight);
 
 $(document).ready(function(){
   $('#home').hide();
-  switchPage(location.hash);
+  $.get('gen/content_table.json',function(result){
+    document.articles = eval(result);
+    switchPage(location.hash);
+  });
 });
 
 
