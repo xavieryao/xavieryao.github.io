@@ -4,21 +4,38 @@
 
 var markdown = new Markdown.Converter();
 
+function ajax(url,tag,onSuccess){
+	try{
+		if(document.cache[tag] == undefined){
+			request = $.get(url,function(data){
+				document.cache[tag] = markdown.makeHtml(data);;
+				onSuccess(document.cache[tag]);
+			});
+			request.fail(function( jqXHR, textStatus, errorThrown ) {
+				onError(errorThrown.toString());
+			});
+		}else{
+			onSuccess(document.cache[tag]);
+		}
+	}catch(err){
+		onError(err.toString());
+	}
+}
+
+function onError(def){
+	console.error('ERR - The zombies ate your brain!');
+	console.error(def);
+	window.location.href = "404.html";
+}
+
 function reload(id){
 	if(document.articles[id] == undefined){
-		window.location.href = "404.html";
+		onError('Page Not Found.');
 		return;
 	}
-	if (document.articles[id].content == undefined){
-		$.get('articles/' + document.articles[id].URL,function(result){
-			document.articles[id].content = markdown.makeHtml(result);
-			fillContent();	
-		});
-	}else{
-		fillContent();
-	}
-	function fillContent(){
-		$('#content').html(document.articles[id].content);
+	ajax('articles/' + document.articles[id].URL,id,fillContent);
+	function fillContent(data){
+		$('#content').html(data);
 		location.hash = '#' + formatId(id);
 	}
 }
@@ -45,16 +62,10 @@ function switchPage(page){
 	}
 	switch(page){
 		case 'home':
-			if (document.home == undefined){
-				$.get('articles/home.md' ,function(result){
-					document.home = markdown.makeHtml(result);
-					$('#content').html(document.home);
-					location.hash = '#home';	
-				});			
-			}else{
-				$('#content').html(document.home);
+			ajax('articles/home.md','home',function(data){
+				$('#content').html(data);
 				location.hash = '#home';	
-			}
+			});
 			break;
 		case 'index':
 			loadContentTable();
@@ -65,14 +76,14 @@ function switchPage(page){
 }
 
 function loadContentTable(){
-	if (document.content_table == undefined) {
+	if (document.cache.content_table == undefined) {
 		var ct = document.articles;
 		var md = "###Table Of Content   \n         \n";
 		for(var i = 0; i < ct.length; i++){
 			md = md.concat("<a href=\"javascript:switchPage('"+ i +"')\" >"+ct[i].title+'</a>   \n');
 		}
-		document.content_table = markdown.makeHtml(md);
+		document.cache.content_table = markdown.makeHtml(md);
 	}
-	$('#content').html(document.content_table);
+	$('#content').html(document.cache.content_table);
 	location.hash = '#index';
 }

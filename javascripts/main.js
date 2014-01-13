@@ -17,6 +17,7 @@ $(window).resize(sectionHeight);
 
 $(document).ready(function(){
   $('#home').hide();
+  document.cache = {};
   $.get('gen/content_table.json',function(result){
     document.articles = eval(result);
     switchPage(location.hash);
