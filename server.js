@@ -8,7 +8,7 @@ var fs = require('fs');
 http.createServer(function (req,res){
 	if(req.url == '/')
 		req.url = '/index.html';	
-	req.url = '.' + req.url;
+	req.url = '.' + req.url.split('?')[0];
 	console.log(req.url);
 	fs.readFile(req.url,'utf-8',function(err,data){
 		res.writeHead(200);
