@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"ar",
+				"articles"
+			],
+			[
+				"cont",
+				"content_table"
+			],
+			[
+				"a",
+				"articles"
+			],
+			[
+				"sp",
+				"splited"
+			],
+			[
+				"func",
+				"functions"
+			],
+			[
+				"rel",
+				"reloadFromHtmlFile"
+			],
+			[
+				"ht",
+				"html_plain"
+			],
+			[
+				"reload",
+				"reloadFromMdFile"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
 				"sc",
 				"scored"
 			],
@@ -40,16 +80,8 @@
 				"reloadFromHtmlFile"
 			],
 			[
-				"reload",
-				"reloadFromHtmlText"
-			],
-			[
 				"reloadFromMd",
 				"reloadFromMdText"
-			],
-			[
-				"rel",
-				"reloadFromMdFile"
 			],
 			[
 				"char",
@@ -62,10 +94,6 @@
 			[
 				"ch",
 				"charAt"
-			],
-			[
-				"for",
-				"for	for (…) {…} (Improved Native For-Loop)"
 			],
 			[
 				"inp",
@@ -110,10 +138,6 @@
 			[
 				"e",
 				"endif"
-			],
-			[
-				"ma",
-				"main	main()"
 			],
 			[
 				"send",
@@ -191,6 +215,46 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2655,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "articles/home.md",
+			"settings":
+			{
+				"buffer_size": 880,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "articles/The page cannot be found.md",
+			"settings":
+			{
+				"buffer_size": 1923,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascripts/functions.js",
+			"settings":
+			{
+				"buffer_size": 1781,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gen/content_table.json",
+			"settings":
+			{
+				"buffer_size": 359,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -241,6 +305,25 @@
 	},
 	"file_history":
 	[
+		"/Users/Xavier/xavieryao.github.io/javascripts/main.js",
+		"/Users/Xavier/xavieryao.github.io/articles/dream.md",
+		"/Users/Xavier/xavieryao.github.io/articles/sonnet_106.md",
+		"/Users/Xavier/xavieryao.github.io/articles/home.md",
+		"/Users/Xavier/xavieryao.github.io/index.html",
+		"/Users/Xavier/xavieryao.github.io/gen/content_table.json",
+		"/Users/Xavier/xavieryao.github.io/javascripts/functions.js",
+		"/Users/Xavier/xavieryao.github.io/stylesheets/styles.css",
+		"/Users/Xavier/xavieryao.github.io/articles/brainfuck.md",
+		"/Users/Xavier/xavieryao.github.io/test.coffee",
+		"/Users/Xavier/xavieryao.github.io/test.js",
+		"/Users/Xavier/xavieryao.github.io/javascripts/Article.js",
+		"/Users/Xavier/xavieryao.github.io/javascripts/page_switch.js",
+		"/Users/Xavier/xavieryao.github.io/articles/brainfuck.html",
+		"/Users/Xavier/xavieryao.github.io/articles/welcome.md",
+		"/Users/Xavier/xavieryao.github.io/javascripts/ajax.js",
+		"/Users/Xavier/xavieryao.github.io/articles/hello_world.markdown",
+		"/Users/Xavier/xavieryao.github.io/brainfuck.html",
+		"/Users/Xavier/xavieryao.github.io/params.json",
 		"/Users/Xavier/Documents/line/cs/test.coffee",
 		"/Users/Xavier/Documents/line/cs/hello.coffee",
 		"/Users/Xavier/Documents/line/line.sublime-project",
@@ -251,24 +334,15 @@
 		"/Users/Xavier/Documents/hello.coffee",
 		"/Users/Xavier/Documents/untitled.litcoffee",
 		"/Users/Xavier/xavieryao.github.io/javascripts/brainfuck.js",
-		"/Users/Xavier/xavieryao.github.io/brainfuck.html",
-		"/Users/Xavier/xavieryao.github.io/stylesheets/styles.css",
 		"/Users/Xavier/xavieryao.github.io/articles/home.html",
-		"/Users/Xavier/xavieryao.github.io/javascripts/page_switch.js",
-		"/Users/Xavier/xavieryao.github.io/javascripts/ajax.js",
-		"/Users/Xavier/xavieryao.github.io/gen/content_table.json",
 		"/Users/Xavier/shadowsocks-gui/README.md",
 		"/Users/Xavier/xavieryao.github.io/LICENSE",
 		"/Users/Xavier/aircrack-ng/src/Makefile",
-		"/Users/Xavier/xavieryao.github.io/javascripts/main.js",
-		"/Users/Xavier/xavieryao.github.io/index.html",
 		"/Users/Xavier/xavieryao.github.io/articles/the_great_gatsby.markdown",
 		"/Users/Xavier/xavieryao.github.io/.gitignore",
 		"/Users/Xavier/xavieryao.github.io/gen/content_table.markdown",
 		"/Users/Xavier/xavieryao.github.io/package.json",
 		"/Users/Xavier/xavieryao.github.io/node_modules/markdown-js/lib/markdown.js",
-		"/Users/Xavier/xavieryao.github.io/articles/hello_world.markdown",
-		"/Users/Xavier/xavieryao.github.io/params.json",
 		"/Users/Xavier/xavieryao.github.io/README.md",
 		"/Users/Xavier/Documents/web/views/index.ejs",
 		"/Users/Xavier/Documents/web/node_modules/express-partials/README.md",
@@ -338,6 +412,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console",
+			"banner",
+			"nav",
+			"download",
+			"button",
 			"compileOnSav",
 			"highlight",
 			"i",
@@ -365,8 +444,148 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1565,
+								1565
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "articles/home.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								657,
+								657
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 232.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "articles/The page cannot be found.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1923,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "javascripts/functions.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1781,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								297,
+								297
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 23.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "gen/content_table.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								60,
+								60
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

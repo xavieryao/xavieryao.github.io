@@ -5,10 +5,14 @@
 var markdown = new Markdown.Converter();
 
 function reload(id){
+	if(document.articles[id] == undefined){
+		window.location.href = "404.html";
+		return;
+	}
 	if (document.articles[id].content == undefined){
 		$.get('articles/' + document.articles[id].URL,function(result){
 			document.articles[id].content = markdown.makeHtml(result);
-			fillContent();
+			fillContent();	
 		});
 	}else{
 		fillContent();
