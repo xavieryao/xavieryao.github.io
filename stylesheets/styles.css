@@ -967,7 +967,8 @@ footer {
   }
 
   #banner {
-    display: none;
+    bottom: 0px;
+    top: auto;
   }
 
   header ul {
