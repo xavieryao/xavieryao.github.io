@@ -70,6 +70,12 @@ function switchPage(page){
 		case 'index':
 			loadContentTable();
 			break;
+		case 'the_one':
+			ajax('articles/her.md','the_one',function(data){
+				$('#content').html(data);
+				location.hash = '#the_one';
+			});
+			break;
 		default:
 			reload(page);
 	}

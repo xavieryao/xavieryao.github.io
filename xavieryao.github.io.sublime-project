@@ -4,6 +4,14 @@
 		{
 			"follow_symlinks": true,
 			"path": "/Users/Xavier/xavieryao.github.io"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/Xavier/tweaks/nosb"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/Xavier/tweaks/cse"
 		}
 	]
 }

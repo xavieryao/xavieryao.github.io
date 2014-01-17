@@ -18,6 +18,14 @@ $(window).resize(sectionHeight);
 $(document).ready(function(){
   $('#home').hide();
   document.cache = {};
+  document.easterEggCount = 0;
+  $('#logo').click(function(){
+    if(document.easterEggCount == 10)
+      document.easterEggCount = -1;
+    document.easterEggCount ++;
+    if(document.easterEggCount == Math.floor(Math.random()*10))
+      switchPage('the_one');
+  });
   $.get('gen/content_table.json',function(result){
     document.articles = eval(result);
     switchPage(location.hash);
