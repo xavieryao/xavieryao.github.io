@@ -20,7 +20,7 @@ $(document).ready(function(){
   document.cache = {};
   document.easterEggCount = 0;
   $('#logo').click(function(){
-    if(document.easterEggCount == 10)
+    if(document.easterEggCount == 9)
       document.easterEggCount = -1;
     document.easterEggCount ++;
     if(document.easterEggCount == Math.floor(Math.random()*10))
