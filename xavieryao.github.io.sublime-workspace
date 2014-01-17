@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"did",
+				"didFinishWithResult"
+			],
+			[
+				"didF",
+				"didFailLoadWithError"
+			],
+			[
+				"pr",
+				"productPage"
+			],
+			[
+				"didFin",
+				"didFinishPurchase"
+			],
+			[
+				"didFini",
+				"didFinishWithResult"
+			],
+			[
+				"show",
+				"showAlert"
+			],
+			[
+				"e",
+				"err"
+			],
+			[
+				"er",
+				"errorThrown"
+			],
+			[
+				"on",
+				"onError"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
 				"for",
 				"for	for (…) {…}"
 			],
@@ -104,10 +152,6 @@
 				"switchPage"
 			],
 			[
-				"on",
-				"onDocReady"
-			],
-			[
 				"get",
 				"getBinary"
 			],
@@ -134,10 +178,6 @@
 			[
 				"line",
 				"line_num"
-			],
-			[
-				"e",
-				"endif"
 			],
 			[
 				"send",
@@ -196,10 +236,6 @@
 				"background-size"
 			],
 			[
-				"re",
-				"recursion"
-			],
-			[
 				"t2",
 				"t2-t1"
 			],
@@ -216,10 +252,10 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "javascripts/functions.js",
 			"settings":
 			{
-				"buffer_size": 2655,
+				"buffer_size": 2213,
 				"line_ending": "Unix"
 			}
 		},
@@ -227,31 +263,15 @@
 			"file": "articles/home.md",
 			"settings":
 			{
-				"buffer_size": 880,
+				"buffer_size": 889,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "articles/The page cannot be found.md",
+			"file": "javascripts/main.js",
 			"settings":
 			{
-				"buffer_size": 1923,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "javascripts/functions.js",
-			"settings":
-			{
-				"buffer_size": 1781,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "gen/content_table.json",
-			"settings":
-			{
-				"buffer_size": 359,
+				"buffer_size": 1378,
 				"line_ending": "Unix"
 			}
 		}
@@ -305,14 +325,29 @@
 	},
 	"file_history":
 	[
+		"/Users/Xavier/xavieryao.github.io/articles/her.md",
+		"/Users/Xavier/xavieryao.github.io/her.md",
+		"/opt/theos/include/Safari/CanSetSearchEngineScriptObject.h",
+		"/Users/Xavier/tweaks/cse/Makefile",
+		"/Users/Xavier/tweaks/cse/Tweak.xm",
+		"/opt/theos/include/Safari/SearchEngineController.h",
+		"/Users/Xavier/tweaks/nosb/Tweak.xm",
+		"/Users/Xavier/tweaks/nosb/Makefile",
+		"/Users/Xavier/tweaks/nosb/control",
+		"/opt/theos/include/MobileSafari/StoreBannerTracker.h",
+		"/opt/theos/include/MobileSafari/StoreBanner.h",
 		"/Users/Xavier/xavieryao.github.io/javascripts/main.js",
+		"/Users/Xavier/xavieryao.github.io/javascripts/functions.js",
+		"/Users/Xavier/xavieryao.github.io/server.js",
+		"/Users/Xavier/xavieryao.github.io/index.html",
+		"/Users/Xavier/xavieryao.github.io/stylesheets/styles.css",
+		"/Users/Xavier/xavieryao.github.io/404.html",
+		"/Users/Xavier/xavieryao.github.io/articles/404.html",
+		"/Users/Xavier/xavieryao.github.io/gen/content_table.json",
+		"/Users/Xavier/xavieryao.github.io/articles/home.md",
+		"/Users/Xavier/xavieryao.github.io/articles/The page cannot be found.md",
 		"/Users/Xavier/xavieryao.github.io/articles/dream.md",
 		"/Users/Xavier/xavieryao.github.io/articles/sonnet_106.md",
-		"/Users/Xavier/xavieryao.github.io/articles/home.md",
-		"/Users/Xavier/xavieryao.github.io/index.html",
-		"/Users/Xavier/xavieryao.github.io/gen/content_table.json",
-		"/Users/Xavier/xavieryao.github.io/javascripts/functions.js",
-		"/Users/Xavier/xavieryao.github.io/stylesheets/styles.css",
 		"/Users/Xavier/xavieryao.github.io/articles/brainfuck.md",
 		"/Users/Xavier/xavieryao.github.io/test.coffee",
 		"/Users/Xavier/xavieryao.github.io/test.js",
@@ -444,31 +479,30 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "javascripts/functions.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2655,
+						"buffer_size": 2213,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1565,
-								1565
+								1613,
+								1613
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -482,15 +516,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 880,
+						"buffer_size": 889,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								657,
-								657
+								94,
+								94
 							]
 						],
 						"settings":
@@ -498,90 +532,36 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 232.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "articles/The page cannot be found.md",
+					"file": "javascripts/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1923,
+						"buffer_size": 1378,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "javascripts/functions.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1781,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								297,
-								297
+								593,
+								593
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 23.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "gen/content_table.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 359,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								60,
-								60
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 60.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -1,9 +1,10 @@
-###About Xavier Yao    
+##About Xavier Yao    
 爱Coding 爱M记 **最爱Bing**. 傲娇腹黑技术宅，软萌高冷小清新。 
   
 当前主要在折腾:
 
 *	逆袭
+*	iOS tweak
 *	CoffeeScript
 *	JavaScript/前端——a sneak peak
 *	Groovy
@@ -22,11 +23,11 @@
 
 详情待补充。（投稿请联系[我的新浪微博](http://weibo.com/xavieryao) ）
 
-###About contents
+##About contents
 
 因为根本没有文采，写作文从来是呵呵……心血来潮写Blog也是找喷。完全胡言乱语想（看）到什么写什么逻辑不明缺乏中心论点什么的就别管了吧反正写出来我自己都不会看也不是为了记叙描写抒情议论什么的……
 
-###About this blog
+##About this blog
 
 貌似是上个月还是上上个月假冒专家给[赖隽同学](http://weibo.com/IamBigBoned)传授送礼经验的时候想到要是把我搜集到东西汇总起来一定效果拔群。于是开始了本坑-.-
 
