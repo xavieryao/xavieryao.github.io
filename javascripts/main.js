@@ -33,7 +33,8 @@ $(document).ready(function(){
 });
 
 
-fixScale = function(doc) {
+fixScale = function() {
+  var doc = $('section');
 
   var addEvent = 'addEventListener',
       type = 'gesturestart',

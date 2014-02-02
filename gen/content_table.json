@@ -1,5 +1,9 @@
 [
 	{
+		"title" : "Favorite Songs",
+		"URL" : "songs.md"
+	},
+	{
 		"title" : "Sonnet 106",
 		"URL" : "sonnet_106.md"
 	},

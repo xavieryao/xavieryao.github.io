@@ -8,7 +8,7 @@ function ajax(url,tag,onSuccess){
 	try{
 		if(document.cache[tag] == undefined){
 			request = $.get(url,function(data){
-				document.cache[tag] = markdown.makeHtml(data);;
+				document.cache[tag] = markdown.makeHtml(data);
 				onSuccess(document.cache[tag]);
 			});
 			request.fail(function( jqXHR, textStatus, errorThrown ) {
@@ -64,6 +64,7 @@ function switchPage(page){
 		case 'home':
 			ajax('articles/home.md','home',function(data){
 				$('#content').html(data);
+				fixScale();	
 				location.hash = '#home';	
 			});
 			break;

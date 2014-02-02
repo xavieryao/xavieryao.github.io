@@ -1,3 +1,7 @@
+##About Easter Egg
+请**注意**，本博客有彩蛋，提示: *GingerBread* 
+
+P.S.其实看一下源码或者Commit Log就行……
 ##About Xavier Yao    
 爱Coding 爱M记 **最爱Bing**. 傲娇腹黑技术宅，软萌高冷小清新。 
   

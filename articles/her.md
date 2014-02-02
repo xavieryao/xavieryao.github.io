@@ -3,7 +3,8 @@ Something Worth Reaching For
 
 Oh can't you see it baby,   
 You've got me go'in crazy.     
-Wherever you go, whatever you do,    
+Wherever you go,   
+Whatever you do,    
 I will be right here waiting for you.    
 Whatever it takes,   
 Or how my heart breaks,   
