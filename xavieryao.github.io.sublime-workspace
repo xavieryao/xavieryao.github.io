@@ -256,10 +256,10 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "articles/home.md",
 			"settings":
 			{
-				"buffer_size": 2660,
+				"buffer_size": 971,
 				"line_ending": "Unix"
 			}
 		}
@@ -487,29 +487,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
-					"semi_transient": true,
+					"file": "articles/home.md",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2660,
+						"buffer_size": 971,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								830,
-								830
+								81,
+								81
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 78.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

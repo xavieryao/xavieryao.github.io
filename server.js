@@ -5,6 +5,16 @@
 var http = require("http");
 var fs = require('fs');
 
+var port = 3000;
+
+if(process.argv.length > 2){
+	if (process.argv[0] === 'sudo') {
+		port = process.argv[3];
+	}else{
+		port = process.argv[2];
+	}
+}
+
 http.createServer(function (req,res){
 	if(req.url == '/')
 		req.url = '/index.html';	
@@ -15,4 +25,4 @@ http.createServer(function (req,res){
 		res.write(data);
 		res.end();
 	});
-}).listen(3000);
+}).listen(port);

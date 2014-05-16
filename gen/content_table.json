@@ -1,15 +1,15 @@
 [
 	{
+		"title" : "班会：期中之后，高三之前",
+		"URL" : "senior_3.md"
+	},
+	{
 		"title" : "Favorite Songs",
 		"URL" : "songs.md"
 	},
 	{
 		"title" : "Sonnet 106",
 		"URL" : "sonnet_106.md"
-	},
-	{
-		"title" : "逆袭",
-		"URL" : "dream.md"
 	},
 	{
 		"title":"Brainfuck",
