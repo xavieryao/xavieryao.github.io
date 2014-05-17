@@ -56,6 +56,6 @@
 *2014年5月15日*
 
 
-*编校/*何钰清 *录音/*李雨萱 *录入/*姚沛然
+*编校/*何钰清 *录音/*李雨萱 *听写/*姚沛然
 
 [音频格式](http://pan.baidu.com/s/1o6qd0iY) [图片格式](http://xavieryao.github.io/images/senior_3.png)
