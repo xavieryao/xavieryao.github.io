@@ -1,4 +1,56 @@
 markdown = new Markdown.Converter();
+console.log 'Start'
+sectionHeight = () ->
+	total      =  $(window).height()
+	$section   =  $('section').css 'height','auto'
+
+	if $section.outerHeight true < total
+		margin = $section.outerHeight true - $section.height()
+		$section.height total - margin - 20
+	else
+		$section.css 'height','auto'
+	#fixScale()
+
+$(window).resize sectionHeight
+
+$(document).ready () ->
+	$('#home').hide()
+	document.cache = {}
+	document.easterEggCount = 0 
+	$('#logo').click ()->
+		if document.easterEggCount is 9 then document.easterEggCount = -1
+		document.easterEggCount += 1
+		if document.easterEggCount is Math.floor Math.random()*10
+			switchPage 'the_one'
+	$.get 'gen/content_table.json', (result) ->
+		document.articles = eval result
+		switchPage location.hash
+		
+switchPage = (page)->
+	page = page.replace '#',''
+	loadIcon = '<div class="loadIcon" ><img src="images/octocat-spinner-64.gif" alt="Loading"></img><p>Loading...<br /></p></div>'
+	$('content').html loadIcon
+
+	if page is '' then page = home
+	if page is 'home'
+		$('#home').fadeOut 'slow'
+	else
+		$('#home').fadeIn 'slow'
+	console.log "switch to #{page}"
+	switch page
+		when 'home'
+			ajax 'articles/home.md','home',(data)->
+				$('#content').html data
+				fixScale()
+				location.hash = '#home'
+		when 'index'
+			loadContentTable()
+		when 'the_one'
+			ajax 'articles/her.md','the_one',(data)->
+				$('#content').html data
+				location.hash = '#the_one'
+		else
+			reload page
 
 ajax = (url,tag,onSuccess) ->
 	try
@@ -33,3 +85,13 @@ formatId = (id) ->
 	result = id
 	if result < Math.pow 10,i for i in [0..6] then result = '0' + result
 	return result	
+
+loadContentTable = ->
+	if not document.cache.content_table
+		ct = document.articles
+		ct = document.articles;
+		md = "###Table Of Content   \n         \n";
+		md = md.concat "<a href=\"javascript:switchPage('"+ i +"')\" >"+ct[i].title+'</a>   \n' for i in [0..ct.length]
+		document.cache.content_table = markdown.makeHtml md
+	$('#content').html document.cache.content_table
+	location.hash = '#index';
