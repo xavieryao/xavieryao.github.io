@@ -1,5 +1,5 @@
 markdown = new Markdown.Converter();
-console.log 'Start'
+
 sectionHeight = () ->
 	total      =  $(window).height()
 	$section   =  $('section').css 'height','auto'
