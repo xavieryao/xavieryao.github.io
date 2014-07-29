@@ -81,10 +81,18 @@
       case 'index':
         return loadContentTable();
       case 'the_one':
-        return ajax('articles/her.md', 'the_one', function(data) {
-          $('#content').html(data);
-          return location.hash = '#the_one';
-        });
+        if (Math.random() < 0.5) {
+          return ajax('articles/her.md', 'the_one', function(data) {
+            $('#content').html(data);
+            return location.hash = '#the_one';
+          });
+        } else {
+          return ajax('articles/she.md', 'she', function(data) {
+            $('#content').html(data);
+            return location.hash = '#the_one';
+          });
+        }
+        break;
       default:
         return reload(page);
     }

@@ -63,9 +63,14 @@ switchPage = (page)->
 		when 'index'
 			loadContentTable()
 		when 'the_one'
-			ajax 'articles/her.md','the_one',(data)->
-				$('#content').html data
-				location.hash = '#the_one'
+			if Math.random() < 0.5
+				ajax 'articles/her.md','the_one',(data)->
+					$('#content').html data
+					location.hash = '#the_one'
+			else
+				ajax 'articles/she.md','she',(data)->
+					$('#content').html data
+					location.hash = '#the_one'
 		else
 			reload page
 
