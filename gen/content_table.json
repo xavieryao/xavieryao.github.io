@@ -12,7 +12,7 @@
 		"URL": "the_great_gatsby.md"
 	},
 	{
-		"title":"Brainfuck",
+		"title":"Brainfuck 0x00",
 		"URL":"brainfuck.md"
 	},
 	{
@@ -26,5 +26,9 @@
 	{
 		"title" : "行路远 梦为辇 登云巅",
 		"URL" : "senior_3.md"
+	},
+	{
+		"title" : "Brainfuck 0x01",
+		"URL" : "brainfuck_1.md"
 	}
 ]

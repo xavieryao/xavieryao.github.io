@@ -50,6 +50,7 @@
 
   switchPage = function(page) {
     var loadIcon;
+    $('body').scrollTop(0);
     page = page.replace('#', '');
     loadIcon = '<div class="loadIcon" ><img src="images/octocat-spinner-64.gif" alt="Loading"></img><p>Loading...<br /></p></div>';
     $('content').html(loadIcon);
@@ -66,6 +67,7 @@
         return ajax('articles/home.md', 'home', function(data) {
           $('#content').html(data);
           fixScale();
+          $('body').scrollTop(0);
           return location.hash = '#home';
         });
       case 'index':
@@ -115,6 +117,7 @@
     }
     return ajax("articles/" + page.URL, id, function(data) {
       $('#content').html(data);
+      $('body').scrollTop(0);
       return location.hash = '#' + id;
     });
   };
@@ -130,6 +133,7 @@
       document.cache.content_table = markdown.makeHtml(md);
     }
     $('#content').html(document.cache.content_table);
+    $('body').scrollTop(0);
     return location.hash = '#index';
   };
 
