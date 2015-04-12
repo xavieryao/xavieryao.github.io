@@ -39,6 +39,7 @@ $(document).ready ->
 		switchPage location.hash
 		
 switchPage = (page)->
+	$('body').scrollTop 0
 	page = page.replace '#',''
 	loadIcon = '<div class="loadIcon" ><img src="images/octocat-spinner-64.gif" alt="Loading"></img><p>Loading...<br /></p></div>'
 	$('content').html loadIcon
@@ -53,6 +54,7 @@ switchPage = (page)->
 			ajax 'articles/home.md','home',(data)->
 				$('#content').html data
 				fixScale()
+				$('body').scrollTop 0
 				location.hash = '#home'
 		when 'index'
 			loadContentTable()
@@ -88,6 +90,7 @@ reload = (id) ->
 		return undefined
 	ajax "articles/#{page.URL}", id, (data) ->
 		$('#content').html data
+		$('body').scrollTop 0
 		location.hash = '#' + id
 
 loadContentTable = ->
@@ -97,4 +100,5 @@ loadContentTable = ->
 		md = md.concat "<a href=\"javascript:switchPage('#{i}')\" >#{ct[i].title}</a>   \n" for i in [ct.length - 1 ... 0]
 		document.cache.content_table = markdown.makeHtml md
 	$('#content').html document.cache.content_table
+	$('body').scrollTop 0
 	location.hash = '#index';

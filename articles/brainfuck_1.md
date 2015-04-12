@@ -1,0 +1,18 @@
+Brainfuck 0x01
+======
+书接上回。  
+
+上回介绍了Brainfuck这个神奇的编程语言，还放了一个JS写的没写对的Brainfuck解释器来丢人。去年（14）WWDC之后
+闲的蛋疼更新Yosemite Beta的时候又闲的蛋疼顺便下载了个Xcode 5 beta体验了一把Swift。话说这Swift就是好啊，
+作为一款编译型的编程语言，融合了这么多现代语言的特性，写起来相当爽（奇葩的是连输入输出函数都没有……）。当初为了
+体验就写了一个[Swift的Brainfuck解释器](https://github.com/xavieryao/Swift-Brainfuck)  
+
+这个解释器用到了Swift的枚举之类的特性，也体现出了`let`和`var`的区别。和上次那个JS版的相比这次用了递归…
+（好像没搞尾递归…另外尾递归明明就是**伪递归**嘛！就是把迭代写成了函数形式==……）似乎高大上了许多，但是执行点
+稍微复杂的Brainfuck还是会蛋疼（哪里复杂了！！）当然也可能是我生成的Brainfuck太渣……   
+
+看过[编码:隐匿在计算机软硬件背后的语言](http://www.amazon.cn/编码-隐匿在计算机软硬件背后的语言-查尔斯•佩措尔德/dp/B009RSXIB4/ref=sr_1_1?ie=UTF8&qid=1428844636&sr=8-1&keywords=编码)之后我真是
+感受很深。这本书解答了我关于计算机原理的很多疑惑，这样*自底而上*学过之后再看汇编啊C语言啊**甚至Brainfuck**
+都简单多了。所以回味了回味就用C写了个加法器的实现，用CoffeeScript写了一个
+[生成Brainfuck的DSL](https://gist.github.com/xavieryao/18cfce963d9e26dd1d14)
+这样一来算是更深层次地理解了CPU和DSL。
