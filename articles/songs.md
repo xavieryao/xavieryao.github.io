@@ -11,3 +11,14 @@
 老男孩不说，那些年是2011年度最佳*科幻片*最值得回味的地方了，Yound and Beautiful大概是The Great Gatsby(2013) OST里唯一一首有点爵士时代奢靡感觉的了,Right Here Waiting的话虽说Bryan Adams有什么丑闻但是谁也不能否认唱的歌就是好听(Here I am)
 
 嗯心情不好的时候(比如最近)循环播放个七八遍就差不多了~
+
+*****
+
+另外还有小丫头推荐给我的**Tee Shirt--Birdy**
+>	In the morning,   
+>	When you wake up,   
+>	I like to believe you are thinking of me   
+>	I should know, cause I'd spend   
+>	All the whole day   
+>	Listening to your message I'm keeping   
+>	And never deleting   
