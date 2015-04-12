@@ -1,26 +1,24 @@
-##About Easter Egg
-请**注意**，本博客有彩蛋，提示: *GingerBread* 
-
-P.S.其实看一下源码或者Commit Log就行……
 ##About Xavier Yao    
-爱Coding 爱M记 **最爱Bing**. 傲娇腹黑技术宅，软萌高冷小清新。 
+傲娇腹黑技术宅，软萌高冷小清新。 
   
 当前主要在折腾:
 
-*	逆袭
-*	iOS tweak
 *	CoffeeScript
 *	JavaScript/前端——a sneak peak
-*	Groovy
-*	写此Blog
-*	node.js
+*	Swift
+*	vim
+*	node.js/io.js
 *	etc.
 
 过去主要折腾过：
 
 *	Objective-C （写在第一位高端洋气）
+*	<del>逆袭</del> （删除线不显眼怎么破）
 *	Android
 *	Java
+*	Groovy
+*	能写两句 C
+*	iOS tweak
 *	etc.
 
 擅长挖坑，待填坑项目数量难以统计。管中窥豹请看[我的GitHub主页](https://github.com/xavieryao/)。
@@ -33,7 +31,7 @@ P.S.其实看一下源码或者Commit Log就行……
 
 ##About this blog
 
-貌似是上个月还是上上个月假冒专家给[赖隽同学](http://weibo.com/IamBigBoned)传授送礼经验的时候想到要是把我搜集到东西汇总起来一定效果拔群。于是开始了本坑-.-
+貌似是上个月还是上上个月(这告诉我们说日期一定要用时间戳再不济也不能用relative时间啊！完全不知道说的是什么时间)假冒专家给[赖隽同学](http://weibo.com/IamBigBoned)传授送礼经验的时候想到要是把我搜集到东西汇总起来一定效果拔群。于是开始了本坑-.-
 
 在一番辛苦的**重造轮子**后，初具雏形。
 

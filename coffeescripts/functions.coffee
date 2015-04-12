@@ -34,12 +34,6 @@ $(window).resize sectionHeight
 $(document).ready ->
 	$('#home').hide()
 	document.cache = {}
-	document.easterEggCount = 0 
-	$('#logo').click ->
-		if document.easterEggCount is 9 then document.easterEggCount = -1
-		document.easterEggCount += 1
-		if document.easterEggCount is Math.floor Math.random()*10
-			switchPage 'the_one'
 	$.get 'gen/content_table.json', (result) ->
 		document.articles = eval result
 		switchPage location.hash
@@ -62,15 +56,6 @@ switchPage = (page)->
 				location.hash = '#home'
 		when 'index'
 			loadContentTable()
-		when 'the_one'
-			if Math.random() < 0.5
-				ajax 'articles/her.md','the_one',(data)->
-					$('#content').html data
-					location.hash = '#the_one'
-			else
-				ajax 'articles/she.md','she',(data)->
-					$('#content').html data
-					location.hash = '#the_one'
 		else
 			reload page
 
