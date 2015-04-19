@@ -1,0 +1,31 @@
+为了学学后端（`express`）和前端（`bootstrap`），开坑做个gists，尽量用`CoffeeScript` 
+
+想了想数据库还是用`mysql`吧，毕竟Pi上可以用，可以本地测试。顺便提高一下我渣渣的数据库  
+
+晚上稍微写了点，发现模板引擎如果用`ejs`的话前端和后端JS/CS切换得太蛋疼……初步考虑用[coffeekup](https://github.com/mauricemach/coffeekup)，一个可以渲染HTML的CoffeeScript DSL……但是完全用CoffeeScript写HTML有点诡异的感觉……
+
+前端的代码编辑/显示选用[Ace](https://github.com/ajaxorg/ace)，也就是GitHub用的
+
+编译用了`cake`，算是和CoffeeScript配套，比起直接写shell脚本显得逼格高多了。从coffeekup抄了个run方法，相当好使  
+
+	run = (args...) ->
+	  for a in args
+	    switch typeof a
+	      when 'string' then command = a
+	      when 'object'
+	        if a instanceof Array then params = a
+	        else options = a
+	      when 'function' then callback = a
+	  
+	  command += ' ' + params.join ' ' if params?
+	  cmd = spawn '/bin/sh', ['-c', command], options
+	  cmd.stdout.on 'data', (data) -> process.stdout.write data
+	  cmd.stderr.on 'data', (data) -> process.stderr.write data
+	  process.on 'SIGHUP', -> cmd.kill()
+	  cmd.on 'exit', (code) -> callback() if callback? and code is 0
+	  
+在存储提交来的代码的时候出现问题 ` errno: -2,code: 'ENOENT'`,是因为打开的目录不存在，用__dirname倒腾半天弄好了
+
+写package.json的时候遇到的:
+>In the simplest terms, the tilde matches the most recent minor version (the middle number). ~1.2.3 will match all 1.2.x versions but will miss 1.3.0.  
+>The caret, on the other hand, is more relaxed. It will update you to the most recent major version (the first number). ^1.2.3 will match any 1.x.x release including 1.3.0, but will hold off on 2.0.0.
