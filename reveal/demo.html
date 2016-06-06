@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>基于报文标记和流入表的IP源地址验证机制</title>
+
+		<meta name="description" content="An approach of IP spoofing defense using marking and filtering and incoming table">
+		<meta name="author" content="Xavier Yao">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>基于报文标记和流入表的 IP 源地址验证机制</h1>
+					<h3>下一代互联网-结题展示</h3>
+					<p>
+						<small>计54 <a>姚沛然</a> / <a>2015011315</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li>引言</li>
+						<li>相关工作</li>
+						<li>基于报文标记和流入表的 IP 源地址验证机制</li>
+						<li>优势分析</li>
+						<li>总结与展望</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>引言</h2>
+					<p>
+						<span class="fragment">
+						DoS 等攻击常伪造 IP 源地址<br /> </span>
+						<span class="fragment">
+						开放的研究方向<br /></span>
+						<span class="fragment">
+						研究者提出基于端到端与<b>基于路径</b>的方法<br /></span>
+						<span class="fragment">
+						需要做到增量部署、能够缓解攻击<br /></span>
+						<span class="fragment">
+						保证较高准确率，减少误判</span>
+					</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>相关工作</h2>
+					</section>
+					<section>
+						<h2>DPF</h2>
+						<h3>Distributed Packet Filtering</h3>
+						<p>基本思想：路由器通过相互交换信息，确定数据包流入的合法方向。路由时，过滤掉从不合法方向流入的数据包。</p>
+						<p>问题：如何确定合法方向？</p>
+					</section>
+					<section>
+						<h2>IDPF</h2>
+						<h3>Inter-Domain Packet Filters</h3>
+						<p>从 BGP 报文中隐式推断 AS 之间的等级关系，确定所有可行的道路</p>
+						<p>合法报文：从可行道路流入的报文</p>
+					</section>
+					<section>
+						<h2>BASE</h2>
+						<h3>BGP Anti-Spoofing Extension</h3>
+						<p>假设：合法转发路径就是 BGP 报文传播路径</p>
+						<p>标记经过路由器的 IP 报文，通过标记判断来源方向</p>
+						<p>通过 BGP 报文确定合法报文应有的标记</p>
+					</section>
+					<section>
+						<p>在增量部署的情况下都可以取得很好的效果</p>
+						<span class="fragment">
+							<h3>问题</h3>
+							<p>IDPF 假定路由器遵循一定的规则</p>
+							<p>BASE 假设合法转发路径就是 BGP 报文传播路径</p>
+							<p>实际网络中常有不满足假设的情况</p>
+						</span>
+
+					</section>
+					<section>
+						<h2>方向</h2>
+						<p>考虑实际网络中不满足假设的情况，改进上述方法</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>基于报文标记和流入表的 IP 源地址验证机制</h2>
+						<p><b>要点</b></p>
+						<ul>
+							<li>报文标记和过滤</li>
+							<li>流入表（incoming table）</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>基于报文标记和过滤的 IP 源地址验证机制</h2>
+						<p>
+							BASE 的基本思想
+						</p>
+					</section>
+					<section>
+						<p>AS 连接关系图</p>
+						<img src="img/topo_orig.png"/>
+					</section>
+					<section>
+						<p>报文从s传输到t</p>
+						<img src="img/topo2.png"/>
+					</section>
+					<section>
+						<p>s的BGP树：目的地是s的最优路径构成的生成树</p>
+						<img src="img/topo1.png"/>
+					</section>
+					<section>
+						<p>在BGP树上，s与t之间存在唯一道路（BGP道路）</p>
+						<img src="img/topo4.png"/>
+					</section>
+					<section>
+						<p>BGP道路上部署了BASE的路由器（假设只有b和f）构成了BGP道路的一个子道路</p>
+						<img src="img/topo5.png"/>
+					</section>
+					<section>
+						<p>BGP道路上部署了BASE的路由器（假设只有b和f）构成了BGP道路的一个子道路p</p>
+						<img src="img/topo6.png"/>
+					</section>
+					<section>
+						<p><b>假设：</b>s到t之间，合法报文经过的路径就是BGP道路</p>
+						<p>每个部署 BASE 的路由器具有私钥，利用私钥按顺序为道路p上的路由器进行标记</p>
+						<img src="img/topo7.png"/>
+					</section>
+					<section>
+						<p>从s到t的数据包经过部署BASE的路由器时，路由器检查报文上的标记，并重新进行标记</p>
+						<img src="img/topo7.png"/>
+					</section>
+				</section>
+
+				<section>
+					<h3>优势</h3>
+					<p>不需要完整部署也能起到效果</p>
+					<img src="img/topo8.png"/>
+				</section>
+
+				<section>
+					<section>
+						<h3>问题</h3>
+						<p>由于负载均衡、AS间转发策略、网络故障等原因，互联网拓扑中常存在<b>不对等</b></p>
+						<p>约65%的AS间网络存在不对等</p>
+						<img src="img/asym.png" />
+					</section>
+					<section>
+						<h3>问题</h3>
+						<p>互联网拓扑中常存在不对等</p>
+						<img src="img/topo9.png"/>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>改进思路</h3>
+						<p>引入流入表（incoming table）</p>
+						<p>流入表最早在SAVE(Source Address Validity Enforcement Protocol)中提出</p>
+						<p>将源地址空间与来源方向对应</p>
+					</section>
+
+					<section>
+						<h4>具体实现</h4>
+						<p>部署 BASE 的路由器向转发表中的目的地广播(s,m)</p>
+						<p>广播时间：BGP update 时、周期性地</p>
+						<img src="img/topo10.png"/>
+					</section>
+					<section>
+						<p>利用接收到的广播更新过滤规则</p>
+						<img src="img/topo11.png"/>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>评估和总结</h3>
+						<p>基于报文标记和流入表的IP源地址验证机制</p>
+					</section>
+					<section>
+						<h3>优势</h3>
+						<ul>
+							<li>部分部署即可发挥效果</li>
+							<li>在部分非对称网络下也有效</li>
+							<li>减少假阳性</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>问题</h3>
+						<ul>
+							<li>不完全部署情况下，并非在所有非对称网络都有效</li>
+							<li>增加网络负荷</li>
+						</ul>
+					</section>
+					<section>
+						<h3>未来工作</h3>
+						<ul>
+							<li>通过模拟，验证可用性</li>
+							<li>测量对网络负荷的影响</li>
+							<li>与IDPF+SAVE等方案进行效果对比</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>参考文献</h2>
+						<p>[1] S. M. Bellovin. Security problems in the TCP/IP protocol suite[J]. SIGCOMM Comput. Commun. Rev, 1989, vol.19, no.2: pp. 32-48</p>
+						<p>[2] T. Ehrenkranz, J. Li. On the State of IP Spoofing Defense[J]. ACM Trans. Internet Technol. 2009, 9, 2, Article 6, 29 pages.</p>
+						<p>[3]Ehrenkranz T, Li J. An incrementally deployable protocol for learning the valid incoming direction of IP packets[J]. University of Oregon, Tech. Rep, 2007.</p>
+					</section>
+					<section>
+						<p>[4] Lee H, Kwon M, Hasker G, et al. BASE: An incrementally deployable mechanism for viable IP spoofing prevention[C]//Proceedings of the 2nd ACM symposium on Information, computer and communications security. ACM, 2007: 20-31.</p>
+						<p>[5]Li J, Mirkovic J, Wang M, et al. SAVE: Source address validity enforcement protocol[C]//INFOCOM 2002. Twenty-First Annual Joint Conference of the IEEE Computer and Communications Societies. Proceedings. IEEE. IEEE, 2002, 3: 1557-1566.</p>
+					</section>
+				</section>
+				<section>
+					<h1>欢迎指正</h1>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
