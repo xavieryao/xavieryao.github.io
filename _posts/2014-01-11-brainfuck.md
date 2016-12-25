@@ -1,8 +1,8 @@
 ---
--layout: post
--title: "Brainfuck.js"
--date: 2014-01-11
--categories: 高中
+layout: post
+title: "Brainfuck.js"
+date: 2014-01-11
+categories: 高中
 ---
 
 
