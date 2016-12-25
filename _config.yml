@@ -1,9 +1,7 @@
 # Site settings
 title: Xavier Yao's Blog
-description: > This is Xavier Yao's blog. Here I will share interesting stuff
-on computer science and technology and other topics that I came across. But I
-may not update my blog regularly. 姚沛然的博客，不定期更新。
-about: > 姚沛然的博客，不定期更新。
+description: "This is Xavier Yao's blog. Here I will share interesting stuff on computer science and technology and other topics that I came across. But I may not update my blog regularly. 姚沛然的博客，不定期更新。"
+about: "姚沛然的博客，不定期更新。"
 url: "http://xavieryao.github.io"
 baseurl: ""
 logo: "<b>Xavier Yao</b>'s Blog"
