@@ -5,6 +5,8 @@
 -categories: 高中
 ----
 
+
+
 > Then wear the gold hat, if that will move her;    
 > If you can bounce high, bounce high for her too,      
 > Till she cry 'Lover, gold-hatted, high-bouncing lover,      
