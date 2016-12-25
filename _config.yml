@@ -20,7 +20,7 @@ owner:
         username: "xavieryao"
     disqus:
         show: true
-        username: "ichihararifa"
+        username: "xavieryao-github-io"
 sass:
     sass_dir: _sass
     style: compressed
