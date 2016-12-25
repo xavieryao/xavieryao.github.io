@@ -1,8 +1,9 @@
+
 ----
 -layout: post
 -title: "Brainfuck.js"
 -date: 2014-01-11
--categories 高中
+-categories: 高中
 ----
 
 Brainfuck.js is an interpreter for Brainfuck the programming language written in JavaScript. Written by Xavier Yao just for fun.
