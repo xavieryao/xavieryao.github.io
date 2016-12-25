@@ -1,16 +1,15 @@
 # Site settings
-title: Jekyll-materialize
-description: > # this means to ignore newlines until "baseurl:"
-    Write an awesome description for your new site here. You can edit this
-    line in _config.yml. It will appear in your document head meta (for
-    Google search results) and in your feed.xml site description.
+title: Xavier Yao's Blog
+description: > This is Xavier Yao's blog. Here I will share interesting stuff
+on computer science and technology and other topics that I came across. But I
+may not update my blog regularly. 姚沛然的博客，不定期更新。
 url: "http://xavieryao.github.io"
 baseurl: ""
-logo: jekyll-<b>materialize</b>
+logo: "<b>Xavier Yao</b>'s Blog"
 paginate: 5
 paginate_path: "/page:num/"
 owner:
-    email: ichihara.rifa@gmail.com
+    email: peiran.yao@tuna.tsinghua.edu.cn
     facebook:
         show: true
         name: "Ichihara Rifa"
@@ -28,7 +27,10 @@ sass:
     sass_dir: _sass
     style: compressed
 permalink: "/article/:title"
-markdown: redcarpet
+markdown: kramdown
+kramdown:
+    input: GFM
+    hard_wrap: false
 highlighter: pygments
 gems:
     - jekyll-feed
