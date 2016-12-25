@@ -1,4 +1,3 @@
-node_modules/*
-.DS_Store
-*.sublime-project
-npm-debug.log
+_site
+.sass-cache
+.jekyll-metadata
