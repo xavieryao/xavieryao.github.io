@@ -1,7 +1,7 @@
 # Site settings
 title: Xavier Yao's Blog
 description: "This is Xavier Yao's blog. Here I will share interesting stuff on computer science and technology and other topics that I came across. But I may not update my blog regularly. 姚沛然的博客，不定期更新。"
-about: "姚沛然的博客，不定期更新。"
+about: "姚沛然的博客，不定期分享一些自认为好玩儿的东西，主要是魔改的好多东西不记下来的话过不了多久自己就会忘。水平有限，文采也不好，另外就是闻道有先后，术业有专攻。有些 naïve 或者偏激的地方还望各位指正。"
 url: "http://xavieryao.github.io"
 baseurl: ""
 logo: "<b>Xavier Yao</b>'s Blog"
@@ -10,7 +10,7 @@ paginate_path: "/page:num/"
 owner:
     weibo:
         show: true
-        name: "@一抔学渣"
+        name: "一抔学渣"
         url: "http://weibo.com/xavieryao"
     github:
         show: true

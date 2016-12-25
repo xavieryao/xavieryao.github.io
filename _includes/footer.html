@@ -3,7 +3,7 @@
       <div class="col l4 s12">
         <h5 class="white-text">Links</h5>
         <ul>
-          {% if site.owner.weibo.show == true %}<li><a class="grey-text text-lighten-3" href="{{ site.owner.weibo.url }}"><i class="fa fa-weibo"></i>&nbsp;&nbsp;{{ site.owner.weibo.name }}</a></li>{% endif %}
+          {% if site.owner.weibo.show == true %}<li><a class="grey-text text-lighten-3" href="{{ site.owner.weibo.url }}"><i class="fa fa-weibo"></i>&nbsp;&nbsp;@ {{ site.owner.weibo.name }}</a></li>{% endif %}
           {% if site.owner.github.show == true %}<li><a class="grey-text text-lighten-3" href="https://github.com/{{ site.owner.github.username }}"><i class="fa fa-github"></i>&nbsp;&nbsp;{{ site.owner.github.username }}</a></li>{% endif %}
           {% if site.owner.telegram.show == true %}<li><a class="grey-text text-lighten-3" href="https://telegram.com/{{ site.owner.telegram.username }}"><i class="fa fa-telegram"></i>&nbsp;&nbsp;@ {{ site.owner.telegram.username }}</a></li>{% endif %}
           <li><a class="grey-text text-lighten-3" id="email" href="mailto:mail@exmaple.com"><i class="fa fa-send"></i>&nbsp;&nbsp;PlaceHolder</a></li>
