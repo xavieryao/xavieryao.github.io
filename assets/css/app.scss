@@ -74,6 +74,12 @@ article {
     font-size: 1.35rem;
     line-height: 1.7;
     font-weight: 300;
+
+    img {
+      width:100%;
+      height:100%;
+    }
+
     &.post-content {
       ul {
           margin-left: 20px;
@@ -82,7 +88,7 @@ article {
           font-weight: 200;
       }
       li {
-        list-style-type: disc;    
+        list-style-type: disc;
       }
       &.on-index {
         padding:0;
