@@ -1,8 +1,10 @@
 ---
 layout: post
-title: "Great Fragments From the Great Gatsby"
+title: "Great Excerpts From the Great Gatsby"
 date: 2014-01-11
-categories: 高中
+categories:
+  - 高中
+  - Reading
 ---
 
 > Then wear the gold hat, if that will move her;    
