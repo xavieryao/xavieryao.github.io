@@ -24,6 +24,7 @@ categories:
  ```zsh
  plugins=(git zsh-syntax-highlighting)
  ```
+
 3. Powerline
 
  [Powerline](https://github.com/powerline/powerline) 或者其他类 Powerline 的工具就是惠老师和大鹰终端里那个帅帅的状态栏。它可以被集成到 Vim, zsh 和 IPython 里。
@@ -46,3 +47,6 @@ categories:
 6. readline keybinding
 
  这个其实是 shell 的功能([http://www.gnu.org/software/bash/manual/html_node/Bindable-Readline-Commands.html](http://www.gnu.org/software/bash/manual/html_node/Bindable-Readline-Commands.html))，比如说 `C-a` 回到行首， `C-e` 到行尾， `C-k` 删除到行尾之类的，也可以改成 vi 风格的。在 macOS 上是用 `NSxxxx` 实现的能输入文字的地方都可以用emacs keybinding，用惯之后还真的是很爽的。
+
+ 
+EOF
