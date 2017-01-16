@@ -10,7 +10,7 @@ Preface
 -------
 [Deep Learning](http://www.deeplearningbook.org) 这本书是大鹰推荐的深度学习入门文献，内容十分全面，从最基本的数学基础到比较前沿的研究都有涉及，Elon Mask 说它是 *“the only comprehensive book on the subject”* 。这本书上个月刚刚出版，在 [Amazon.com](https://www.amazon.com/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618/ref=sr_1_1?ie=UTF8&qid=1472485235&sr=8-1&keywords=deep+learning+book) 上售价67.98刀，其电子版可以在网上免费下载。
 
-学期里粗略地看了看前6章，大概对基本的思路和概念有了一些了解，也写了一个图像分类网络。代码和数据可以看 [我的GitHub](https://github.com/xavieryao/classification_nn)，另外还写了[大作业的报告](https://raw.githubusercontent.com/xavieryao/classification_nn/master/report/report.pdf)。
+学期里粗略地看了看前6章，大概对基本的思路和概念有了一些了解，也写了一个图像分类网络。代码和数据可以看[我的GitHub](https://github.com/xavieryao/classification_nn)，另外还写了[大作业的报告](https://raw.githubusercontent.com/xavieryao/classification_nn/master/report/report.pdf)。
 
 假期好好读读 Deep Learning Book，记点笔记说不定能管点用。
 
@@ -38,5 +38,38 @@ Deep Learning 里比较关键的是一些应用数学的分支，比如线性代
   \mathbf{A} = \mathbf{V}\textrm{diag}(\mathbf{\lambda})\mathbf{V}^{-1}
   $$
 
+  称作方阵$$\mathbf{A}$$的特征值分解。可以认为特征值刻画了$$\mathbf{A}\mathbf{u}$$将$$\mathbf{u}$$在特征值对应的特征向量的方向上scale的程度。
+
+  但是，并非所有方阵都有特征值分解，也并非所有的特征值都是实数[^1]。好在，任何实对称矩阵都可分解成
+
+  $$
+  \mathbf{A}=\mathbf{Q}\mathbf{\Lambda}\mathbf{Q}^\top
+  $$
+
+  其中$$\mathbf{Q}$$是正交矩阵，对应于n个正交的单位特征向量，且特征值都是实数。这带给我们这样的性质：
+
+  ![](/assets/img/2017/dl_math_01.png)
+
+  而在深度学习中，我们会经常用到实对称矩阵！对连续函数，它的 Hessian 矩阵是实对称的。而在利用二阶导数的梯度下降中，利用泰勒展开我们有
+
+  $$
+  f(\mathbf{x}) = f(\mathbf{x}^{(0)}) + (\mathbf{x-x^{(0)}})^\top\mathbf{g} + \frac{1}{2}(\mathbf{x-x^{(0)}})^\top\mathbf{H}(\mathbf{x-x^{(0)}})
+  $$
+
+  我们希望在下一次迭代后，$$f$$的值
+
+  $$
+  f(\mathbf{x}-\epsilon\mathbf{g}) = f(\mathbf{x}^{(0)}) + \epsilon \mathbf{g}^\top\mathbf{g} + \frac{1}{2}\epsilon^2\mathbf{g}^\top\mathbf{H}\mathbf{g}
+  $$
+
+  变化最大，此时可以解得
+
+  $$
+  \epsilon^\ast = \frac{\mathbf{g^\top g}}{\mathbf{g^\top Hg}}
+  $$
+
+  在最坏情况下，$$\mathbf{g}$$和 Hessian 矩阵的对应特征值最大的特征向量对齐，$$\epsilon^\ast$$应取$\frac{1}{\lambda_\textrm{max}}$，即 Hessian 矩阵的特征值决定了学习率的大小。
+
+[^1]: 俞正光, 鲁自群, & 林润亮. (2011). 线性代数与几何.
 
 **EOF**
