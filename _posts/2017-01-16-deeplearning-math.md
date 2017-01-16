@@ -79,7 +79,7 @@ $$
 以$$e$$为底得到的信息量的单位为 *nats* ，而以2为底所得信息量的单位就是我们所熟知的 *bits* 了。信息熵 *Shannon Entropy* 定义为
 
 $$
-H(x) = \mathrm{E}_{\mathrm{x}~P}[I(x)]
+H(x) = \mathbb{E}_{\mathrm{x}\sim P}[I(x)]
 $$
 
 它给出了“接收的每条消息中包含的信息的平均量”[^2]。利用信息熵可以刻画两种概率分布之间的差距（*Kullback-Leibler divergence*)，从而提供一种学习算法的优化目标（如 *cross entropy*)。
