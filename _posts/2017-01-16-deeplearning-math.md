@@ -10,7 +10,7 @@ Preface
 -------
 [Deep Learning](http://www.deeplearningbook.org) 这本书是大鹰推荐的深度学习入门文献，内容十分全面，从最基本的数学基础到比较前沿的研究都有涉及，Elon Mask 说它是 *“the only comprehensive book on the subject”* 。这本书上个月刚刚出版，在 [Amazon.com](https://www.amazon.com/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618/ref=sr_1_1?ie=UTF8&qid=1472485235&sr=8-1&keywords=deep+learning+book) 上售价67.98刀，其电子版可以在网上免费下载。
 
-学期里粗略地看了看前6章，大概对基本的思路和概念有了一些了解，也写了一个图像分类网络。代码和数据可以看 GitHub，另外还写了大作业的报告。
+学期里粗略地看了看前6章，大概对基本的思路和概念有了一些了解，也写了一个图像分类网络。代码和数据可以看 [我的GitHub](https://github.com/xavieryao/classification_nn)，另外还写了[大作业的报告](https://raw.githubusercontent.com/xavieryao/classification_nn/master/report/report.pdf)。
 
 假期好好读读 Deep Learning Book，记点笔记说不定能管点用。
 
