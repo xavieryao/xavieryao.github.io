@@ -68,7 +68,7 @@ Deep Learning 里比较关键的是一些应用数学的分支，比如线性代
   \epsilon^\ast = \frac{\mathbf{g^\top g}}{\mathbf{g^\top Hg}}
   $$
 
-  在最坏情况下，$$\mathbf{g}$$和 Hessian 矩阵的对应特征值最大的特征向量对齐，$$\epsilon^\ast$$应取$\frac{1}{\lambda_\textrm{max}}$，即 Hessian 矩阵的特征值决定了学习率的大小。
+  在最坏情况下，$$\mathbf{g}$$和 Hessian 矩阵的对应特征值最大的特征向量同向，$$\epsilon^\ast$$应取$\frac{1}{\lambda_\textrm{max}}$，即 Hessian 矩阵的特征值决定了学习率的大小。
 
 [^1]: 俞正光, 鲁自群, & 林润亮. (2011). 线性代数与几何.
 
