@@ -84,6 +84,15 @@ $$
 
 它给出了“接收的每条消息中包含的信息的平均量”[^2]。利用信息熵可以刻画两种概率分布之间的差距（*Kullback-Leibler divergence*)，从而提供一种学习算法的优化目标（如 *cross entropy*)。
 
+#### 数值稳定性
+
+由于计算机中没有真正的“实数”，计算过程中会出现上溢、下溢和舍入误差，在设计、实现机器学习算法的时候需要特别注意。例如当
+
+$$
+\textrm{max}_{i,j}\left\vert\frac{\lambda_i}{\lambda_j}\right\vert
+$$
+
+很大时，对矩阵求逆来说结果会随输入的微小变化发生很大变化，产生很大的数值误差。$$\textrm{max}_{i,j}\left\vert\frac{\lambda_i}{\lambda_j}\right\vert$$称为矩阵的 *condition number*, 这种输出随输入变化很大的现象称为 *poor conditioning*。
 
 [^1]: 俞正光, 鲁自群, & 林润亮. (2011). 线性代数与几何.   
 [^2]: Wikipedia. (2017). https://zh.wikipedia.org/wiki/熵_(信息论)
