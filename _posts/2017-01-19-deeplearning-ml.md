@@ -19,7 +19,7 @@ categories:
 
 统计学习的研究表明，泛化误差（generalization error）和训练误差（traning error）之间的差距的上界随着模型表达能力（capacity）的增加而增加，随着训练数据的增多而降低。由于数据产生时不是严格按照某种概率分布（有noise）而产生的无法避免的误差称为 *Bayes error*。
 
-统计学习的目标是学习一个estimator，尽可能地逼近数据产生的概率分布，如对于有监督学习我们希望学习到$$P(y|\mathbf{x})$$。评价estimator和实际概率分布之间的差距的指标有bias和variance。通常我们依据最大似然估计（maximum likelihood estimation），即：若我们拟合的概率分布以$$\mathbf{\theta}$$为参数，则我们希望最大化
+统计学习的目标是学习一个estimator，尽可能地逼近数据产生的概率分布，如对于有监督学习我们希望学习到$$P(y\vert\mathbf{x})$$。评价estimator和实际概率分布之间的差距的指标有bias和variance。通常我们依据最大似然估计（maximum likelihood estimation），即：若我们拟合的概率分布以$$\mathbf{\theta}$$为参数，则我们希望最大化
 
 $$
 \prod_{i=1}^m p_{model}(\mathbf{x}^{(i)};\mathbf{\theta})
