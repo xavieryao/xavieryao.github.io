@@ -24,49 +24,49 @@ Deep Learning 里比较关键的是一些应用数学的分支，比如线性代
 
 #### 特征值分解
 
-对于一个方阵$$\mathbf{A}$$，若存在一个非零向量$$\mathbf{v}$$使得
+对于一个方阵$$\boldsymbol{A}$$，若存在一个非零向量$$\boldsymbol{v}$$使得
 
 $$
-\mathbf{A}\mathbf{v} = \lambda\mathbf{v}
+\boldsymbol{A}\boldsymbol{v} = \lambda\boldsymbol{v}
 $$
 
-则$$\mathbf{v}$$称为$$\mathbf{A}$$的一个特征向量，$$\lambda$$称为$$\mathbf{v}$$对应的特征值。若$$\mathbf{A}$$存在n个线性无关的特征向量$$\mathbf{v}^{(i)}$$，令$$\mathbf{V} = [\mathbf{v}^{(1)},\mathbf{v}^{(2)}, \cdots, \mathbf{v}^{(n)}]$$，$$\mathbf{\lambda} = [\lambda_1, \lambda_2, \cdots, \lambda_n]^\top$$，则$$\mathbf{A}$$可分解为
+则$$\boldsymbol{v}$$称为$$\boldsymbol{A}$$的一个特征向量，$$\lambda$$称为$$\boldsymbol{v}$$对应的特征值。若$$\boldsymbol{A}$$存在n个线性无关的特征向量$$\boldsymbol{v}^{(i)}$$，令$$\boldsymbol{V} = [\boldsymbol{v}^{(1)},\boldsymbol{v}^{(2)}, \cdots, \boldsymbol{v}^{(n)}]$$，$$\boldsymbol{\lambda} = [\lambda_1, \lambda_2, \cdots, \lambda_n]^\top$$，则$$\boldsymbol{A}$$可分解为
 
 $$
-\mathbf{A} = \mathbf{V}\textrm{diag}(\mathbf{\lambda})\mathbf{V}^{-1}
+\boldsymbol{A} = \boldsymbol{V}\textrm{diag}(\boldsymbol{\lambda})\boldsymbol{V}^{-1}
 $$
 
-称作方阵$$\mathbf{A}$$的特征值分解。可以认为特征值刻画了$$\mathbf{A}\mathbf{u}$$将$$\mathbf{u}$$在特征值对应的特征向量的方向上scale的程度。
+称作方阵$$\boldsymbol{A}$$的特征值分解。可以认为特征值刻画了$$\boldsymbol{A}\boldsymbol{u}$$将$$\boldsymbol{u}$$在特征值对应的特征向量的方向上scale的程度。
 
 但是，并非所有方阵都有特征值分解，也并非所有的特征值都是实数[^1]。好在，任何实对称矩阵都可分解成
 
 $$
-\mathbf{A}=\mathbf{Q}\mathbf{\Lambda}\mathbf{Q}^\top
+\boldsymbol{A}=\boldsymbol{Q}\boldsymbol{\Lambda}\boldsymbol{Q}^\top
 $$
 
-其中$$\mathbf{Q}$$是正交矩阵，对应于n个正交的单位特征向量，且特征值都是实数。这带给我们这样的性质：
+其中$$\boldsymbol{Q}$$是正交矩阵，对应于n个正交的单位特征向量，且特征值都是实数。这带给我们这样的性质：
 
 ![](/assets/img/2017/dl_math_01.png)
 
 而在深度学习中，我们会经常用到实对称矩阵！对连续函数，它的 Hessian 矩阵是实对称的。而在利用二阶导数的梯度下降中，利用泰勒展开我们有
 
 $$
-f(\mathbf{x}) = f(\mathbf{x}^{(0)}) + (\mathbf{x-x^{(0)}})^\top\mathbf{g} + \frac{1}{2}(\mathbf{x-x^{(0)}})^\top\mathbf{H}(\mathbf{x-x^{(0)}})
+f(\boldsymbol{x}) = f(\boldsymbol{x}^{(0)}) + (\boldsymbol{x-x^{(0)}})^\top\boldsymbol{g} + \frac{1}{2}(\boldsymbol{x-x^{(0)}})^\top\boldsymbol{H}(\boldsymbol{x-x^{(0)}})
 $$
 
 我们希望在下一次迭代后，$$f$$的值
 
 $$
-f(\mathbf{x}-\epsilon\mathbf{g}) = f(\mathbf{x}^{(0)}) + \epsilon \mathbf{g}^\top\mathbf{g} + \frac{1}{2}\epsilon^2\mathbf{g}^\top\mathbf{H}\mathbf{g}
+f(\boldsymbol{x}-\epsilon\boldsymbol{g}) = f(\boldsymbol{x}^{(0)}) + \epsilon \boldsymbol{g}^\top\boldsymbol{g} + \frac{1}{2}\epsilon^2\boldsymbol{g}^\top\boldsymbol{H}\boldsymbol{g}
 $$
 
 变化最大，此时可以解得
 
 $$
-\epsilon^\ast = \frac{\mathbf{g^\top g}}{\mathbf{g^\top Hg}}
+\epsilon^\ast = \frac{\boldsymbol{g^\top g}}{\boldsymbol{g^\top Hg}}
 $$
 
-在最坏情况下，$$\mathbf{g}$$和 Hessian 矩阵的对应特征值最大的特征向量同向，$$\epsilon^\ast$$应取$$\frac{1}{\lambda_\textrm{max}}$$，即 Hessian 矩阵的特征值决定了学习率的大小。
+在最坏情况下，$$\boldsymbol{g}$$和 Hessian 矩阵的对应特征值最大的特征向量同向，$$\epsilon^\ast$$应取$$\frac{1}{\lambda_\textrm{max}}$$，即 Hessian 矩阵的特征值决定了学习率的大小。
 
 #### 信息熵
 
